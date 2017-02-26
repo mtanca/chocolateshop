@@ -1,5 +1,4 @@
 class Output
-
   def to_s(order)
     # where c = chocolate, q = quantity
     order_string = order.map { |c, q| "#{c} #{q}, " }.join
