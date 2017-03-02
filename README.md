@@ -2,7 +2,7 @@
 
 This project is written solely in Ruby. Ruby was chosen as the language of choice because it has easy to read syntax and because the scope of the project did not call for a language oriented towards performance (it is a small chocolate shop). Also, the robustness, simplicity, and readability of the rspec testing suite played a factor in the decision to use Ruby.
 
-The program uses a controller class called 'OrderController' that is designed to direct the flow of creating orders throughout the life-cycle of the program. The class method '.create_order_batch' instructs the program to receive an array of order objects from 'OrderFileReader.read_csv'. Within 'OrderController.create_order_batch', the array of order objects are mapped over and updated with redemptions (if any) by via 'Order#redeem_wrappers'. Finally, 'OrderController.create_order_batch' provides 'OrderFileWriter.write' with the orders to be written to 'output/redemptions.csv'.
+The program uses a controller class called OrderController that is designed to direct the flow of creating orders throughout the life-cycle of the program. The class method .create_order_batch instructs the program to receive an array of order objects from OrderFileReader.read_csv. Within OrderController.create_order_batch, the array of order objects are mapped over and updated with redemptions (if any) by via Order#redeem_wrappers. Finally, OrderController.create_order_batch provides OrderFileWriter.write with the orders to be written to 'output/redemptions.csv'.
 
 
 ### Execution and Testing:
