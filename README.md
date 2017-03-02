@@ -1,4 +1,4 @@
-###About the program:
+###About the Program:
 
 This project is written solely in Ruby. Ruby was chosen as the language of choice because it has easy to read syntax and because the scope of the project did not call for a language oriented towards performance (it is a small chocolate shop). Also, the robustness, simplicity, and readability of the rspec testing suite played a factor in the decision to use Ruby.
 
@@ -21,9 +21,10 @@ To run rspec tests, type the command:
 #### bundle exec rake test
 
 
-###Error in Test:
 
-If is worth mentioning that there is an error in the test. The directions state:
+###Error in Test?
+
+If is worth mentioning that there seems to be an error in the test. The directions state:
 Given the data in input/orders.csv, a correct program will generate the following output:
 
 milk 7, dark 0, white 0, sugar free 1
