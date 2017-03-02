@@ -9,16 +9,16 @@ Execution and Testing:
 
 The project relies on rake tasks for execution and testing. To run the program (assuming the gem bundler is installed), open the directory where the program is located and install dependencies:
 
-### bundle install
+#### bundle install
 
 then type in the command:
 
-### bundle exec rake run
+#### bundle exec rake run
 
 this will write the output of the program to 'output/redemptions.csv'.
 To run rspec tests, type the command:
 
-### bundle exec rake test
+#### bundle exec rake test
 
 
 Error in Test:
@@ -27,7 +27,7 @@ If is worth mentioning that there is an error in the test. The directions state:
 Given the data in input/orders.csv, a correct program will generate the following output:
 
 milk 7, dark 0, white 0, sugar free 1
-### milk 0, dark 3, white 0, sugar free 0
+####milk 0, dark 3, white 0, sugar free 0
 milk 0, dark 3, white 0, sugar free 5
 milk 0, dark 1, white 5, sugar free 3
 
