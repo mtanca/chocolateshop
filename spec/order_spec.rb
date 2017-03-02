@@ -1,6 +1,5 @@
 describe Order do
   describe '#redeem_wrappers' do
-
     context 'when type is milk' do
       let(:order) { Order.new({ cash: 12, price: 2, wrappers_needed: 5, type: 'milk' }) }
       let(:correct_quantities) { "milk 7, dark 0, white 0, sugar free 1 \n" }
