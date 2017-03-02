@@ -28,8 +28,8 @@ Given the data in input/orders.csv, a correct program will generate the followin
 
 milk 7, dark 0, white 0, sugar free 1
 ####milk 0, dark 3, white 0, sugar free 0
-
 milk 0, dark 3, white 0, sugar free 5
+
 milk 0, dark 1, white 5, sugar free 3
 
 However, line two should only contain 2 dark chocolates. The data given for line two consists of a budget of $12, a cost of $6, and a redemption threshold of 4 wrappers. Therefore, the order should only contain two dark chocolates as the person buys 2 chocolates ($12/$6) but has two less wrappers needed to qualify for the redemption. For the rspec test, I changed the number of dark chocolates from 3 to 2 in order to test for correct quantities.  
