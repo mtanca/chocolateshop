@@ -1,6 +1,4 @@
 class Order
-  attr_reader :type, :wrappers_needed, :wrappers_used, :cart
-
   COMPLEMENTARY_CHOCOLATES = {
       'milk' => ['milk', 'sugar free'],
       'white' => ['white', 'sugar free'],
@@ -20,7 +18,6 @@ class Order
     @wrappers_needed = wrappers_needed
     @cart = CHOCOLATES.dup
     @wrappers_used = CHOCOLATES.dup
-    # initial amount in cart before redemptions added
     @cart[@type] = cash / price
   end
 
@@ -33,9 +30,11 @@ class Order
         redeem_wrappers
       end
     end
+    Output.to_s(cart)
   end
 
   private
+  attr_reader :type, :wrappers_needed, :wrappers_used, :cart
 
   def possible_redemptions(chocolate)
     (cart[chocolate] - wrappers_used[chocolate]) / wrappers_needed

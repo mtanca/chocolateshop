@@ -5,7 +5,7 @@ class OrderFileReader
   header_converters: :symbol
 }.freeze
 
-  def read_csv(input_file_path)
+  def self.read_csv(input_file_path)
     order_batch = []
     CSV.foreach(input_file_path, CSV_OPTIONS) do |order|
       order = Order.new({
