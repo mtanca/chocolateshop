@@ -1,9 +1,9 @@
 class OrderFileReader
   CSV_OPTIONS = {
-  headers: true,
-  converters: :numeric,
-  header_converters: :symbol
-}.freeze
+    headers: true,
+    converters: :numeric,
+    header_converters: :symbol
+  }.freeze
 
   def self.read_csv(input_file_path)
     order_batch = []

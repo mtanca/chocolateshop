@@ -1,8 +1,8 @@
 class Output
   class << self
-    def to_s(order)
+    def to_s(cart)
       # where c = chocolate, q = quantity
-      order_string = order.map { |c, q| "#{c} #{q}, " }.join
+      order_string = cart.map { |c, q| "#{c} #{q}, " }.join
       trail_with_newline(order_string)
     end
 

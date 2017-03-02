@@ -1,5 +1,5 @@
 task :run => [:environment] do
-  OrderController.new.create_order_batch
+  OrderController.create_order_batch
 end
 
 task :test => [:environment] do
