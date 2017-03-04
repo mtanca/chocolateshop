@@ -22,6 +22,7 @@ To run rspec tests, type the command:
 
 this will display the results of all tests run. Note: test files write to an in-memory temp file rather than disk to avoid overwriting production data.
 
+Please also note that these two commands also load the required files from the environment rake task to make the program work. As a result they must be used to run and test the program. 
 
 ### Error in Test?
 
