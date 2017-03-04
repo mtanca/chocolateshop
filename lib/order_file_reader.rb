@@ -5,9 +5,13 @@ class OrderFileReader
     header_converters: :symbol
   }.freeze
 
-  def self.read_csv(input_file_path)
+  def initialize(input_file_path)
+    @input_file_path =  input_file_path
+  end
+
+  def read_csv
     order_batch = []
-    CSV.foreach(input_file_path, CSV_OPTIONS) do |order|
+    CSV.foreach(@input_file_path, CSV_OPTIONS) do |order|
       order = Order.new({
         # removes single quotes and spacing from parsing csv file
         type: order[:type].delete("'").strip,

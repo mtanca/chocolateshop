@@ -30,7 +30,8 @@ class Order
         redeem_wrappers
       end
     end
-    Output.to_s(cart)
+
+    cart.to_s
   end
 
   private
