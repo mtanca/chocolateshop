@@ -1,5 +1,5 @@
 task :run => [:environment] do
-  OrderController.create_order_batch
+  OrderController.new.create_order_batch
 end
 
 task :test => [:environment] do
@@ -8,6 +8,7 @@ task :test => [:environment] do
 end
 
 task :environment do
+  require 'pry'
   require 'csv'
   require 'rspec'
   require 'tempfile'

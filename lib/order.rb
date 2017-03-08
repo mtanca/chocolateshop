@@ -1,18 +1,4 @@
 class Order
-  COMPLEMENTARY_CHOCOLATES = {
-    'milk' => ['milk', 'sugar free'],
-    'white' => ['white', 'sugar free'],
-    'sugar free' => ['dark', 'sugar free'],
-    'dark' => ['dark']
-  }.freeze
-
-  CHOCOLATES = {
-    'milk' => 0,
-    'dark' => 0,
-    'white' => 0,
-    'sugar free' => 0
-  }.freeze
-
   def initialize(type:, cash:, price:, wrappers_needed:)
     @type = type
     @wrappers_needed = wrappers_needed
@@ -30,12 +16,25 @@ class Order
         redeem_wrappers
       end
     end
-
-    cart.to_s
+    cart
   end
 
   private
   attr_reader :type, :wrappers_needed, :wrappers_used, :cart
+
+  COMPLEMENTARY_CHOCOLATES = {
+    'milk' => ['milk', 'sugar free'],
+    'white' => ['white', 'sugar free'],
+    'sugar free' => ['dark', 'sugar free'],
+    'dark' => ['dark']
+  }.freeze
+
+  CHOCOLATES = {
+    'milk' => 0,
+    'dark' => 0,
+    'white' => 0,
+    'sugar free' => 0
+  }.freeze
 
   def possible_redemptions(chocolate)
     (cart[chocolate] - wrappers_used[chocolate]) / wrappers_needed
@@ -49,7 +48,6 @@ class Order
     COMPLEMENTARY_CHOCOLATES[chocolate].each do |c|
       cart[c] += redemption_amount
     end
-
     cart
   end
 end

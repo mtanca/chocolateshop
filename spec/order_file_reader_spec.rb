@@ -1,12 +1,12 @@
 describe OrderFileReader do
   let(:input_file_path) {'input/orders.csv'}
-  let(:order_batch) {OrderFileReader.read_csv(input_file_path)}
+  let(:order_batch) {OrderFileReader.new(input_file_path).read_orders}
   let(:csv_options) { {headers: true, converters: :numeric, header_converters: :symbol} }
 
-  context '.read_csv' do
+  context '#read_orders' do
     it 'reads a csv' do
       expect(CSV).to receive(:foreach).with(input_file_path, csv_options)
-      OrderFileReader.read_csv(input_file_path)
+      OrderFileReader.new(input_file_path).read_orders
     end
 
     it 'returns an array of order objects' do

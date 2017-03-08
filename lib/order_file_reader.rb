@@ -9,7 +9,7 @@ class OrderFileReader
     @input_file_path =  input_file_path
   end
 
-  def read_csv
+  def read_orders
     order_batch = []
     CSV.foreach(@input_file_path, CSV_OPTIONS) do |order|
       order = Order.new({
