@@ -4,10 +4,8 @@ class Format
   end
 
   def to_s
-    string = @object.map do |key, value|
-      "#{key} #{value}, "
-    end
-    trail_with_newline(string.join)
+    string = @object.map { |key, value| "#{key} #{value}, " }.join
+    trail_with_newline(string)
   end
 
   private
