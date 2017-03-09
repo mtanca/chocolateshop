@@ -16,17 +16,27 @@ Another difficult design decision I made was when and where to format the data s
 
 The project relies on rake tasks for execution and testing. To run the program (assuming the gem bundler is installed), open the directory where the program is located and install dependencies:
 
-**bundle install**
+```
+$ bundle install
+```
 
 then type in the command:
 
-**bundle exec rake run**
+```
+$ bundle exec rake run
+```
 
 this will write the output of the program to 'output/redemptions.csv'.
 To run rspec tests, type the command:
 
-**bundle exec rake test**
+```
+$ bundle exec rake test
+```
 
-this will display the results of all tests run. Note: test files write to an in-memory temp file rather than disk to avoid overwriting production data.
+this will display the results of all the tests. Note: test files write to an in-memory temp file rather than disk to avoid overwriting production data.
 
-Please also note that these two commands also load the required files from the environment rake task to make the program work. As a result they must be used to run and test the program.
+Please note that these two commands also load the required files from the environment rake task to make the program work. As a result they must be used to run and test the program.
+
+### Final Thoughts:
+
+The application design is largely influenced and S.O.L.I.D principles and TDD. Though not perfect, I believe the application is sturdy enough be able to withstand changes without the entire application breaking. I also I want to give a quick shout-out to Sandy Metz materials that were linked as references in the test documentation. Her code examples are amazing!    
